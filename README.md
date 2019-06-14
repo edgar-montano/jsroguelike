@@ -16,7 +16,18 @@ Whats New:
 
 ![Part 1 - Displaying Hello World](screenshots/part-1-hello-world.png)
 
+## Part 2 - Screen Management, Winning, Losing, and Everything in Between.
 
+This section will guide you through screen management. In this section we create two classes, a core Game class, and a GameScreen class. 
+
+GameScreen class will inherit the functionality of the Game class, and add additional functionality, namely, screen management. 
+
+Whats New:
+- Object Oriented Programming (Classes, Inheritance, etc)
+- Constants
+
+![Part 2 - Screen Management](screenshots/part-2-screen-management.gif)
+ 
 #### Credit
 
 This project is inspired by [codingcookies - guide to building a roguelike in js](http://www.codingcookies.com/2013/04/01/building-a-roguelike-in-javascript-part-1/) &
