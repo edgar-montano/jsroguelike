@@ -1,28 +1,14 @@
-import {
-    Color,
-    Display
-} from '../lib/index.js';
+import GameScreen from "../classes/GameScreen.js";
+import { HEIGHT, WIDTH } from "./types.js";
 //  Options passed when we initialize our display object
 let options = {
-    width: 80,
-    height: 20
+  width: WIDTH,
+  height: HEIGHT
 };
-
-let display = new Display(options);
-document.body.append(display.getContainer());
-
-let foreground, background, colors, x;
-for (let i = 0; i < 15; i++) {
-    x = i * 20;
-    foreground = Color.toRGB([
-        255 - x,
-        255 - x,
-        255 - x
-    ]);
-
-    background = Color.toRGB([x, x, x]);
-
-    colors = "%c{" + foreground + "}%b{" + background + "}";
-
-    display.drawText(2, i, colors + "Hello, World!");
-}
+// Wait for window to load before rendering
+window.onload = () => {
+  //initialize a gamescreen and append it to the DOM.
+  let game = new GameScreen(options);
+  document.body.appendChild(game.getDisplay().getContainer());
+  game.switchScreen(game.startScreen);
+};
