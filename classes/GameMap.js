@@ -1,5 +1,6 @@
 import Tile from "./Tile.js";
 import Glyph from "./Glyph.js";
+import { NULL_TILE } from "../assets/types.js";
 
 class GameMap {
   constructor(tiles) {
@@ -13,9 +14,9 @@ class GameMap {
 
   getTile = (x, y) => {
     if (x < 0 || x >= this._width || y < 0 || y >= this._height) {
-      return new Tile(new Glyph());
+      return NULL_TILE;
     } else {
-      return this._tiles[x][y] || new Tile(new Glyph());
+      return this._tiles[x][y] || NULL_TILE;
     }
   };
 }

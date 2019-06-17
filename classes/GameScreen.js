@@ -1,6 +1,13 @@
 import { Color, KEYS, Map } from "../lib/index.js";
 import Game from "./Game.js";
-import { KEYDOWN, HEIGHT, WIDTH } from "../assets/types.js";
+import {
+  KEYDOWN,
+  HEIGHT,
+  WIDTH,
+  NULL_TILE,
+  FLOOR_TILE,
+  WALL_TILE
+} from "../assets/types.js";
 // import Tile from "./Tile.js";
 // import Glyph from "./Glyph.js";
 import GameMap from "./GameMap.js";
@@ -68,7 +75,7 @@ class GameScreen extends Game {
       for (let x = 0; x < WIDTH; x++) {
         map.push([]);
         for (let y = 0; y < HEIGHT; y++) {
-          map[x].push(new Tile(new Glyph()));
+          map[x].push(NULL_TILE);
         }
       }
 
@@ -82,9 +89,9 @@ class GameScreen extends Game {
       generator.create((x, y, v) => {
         // generate floor title
         if (v === 1) {
-          map[x][y] = new Tile(new Glyph("."));
+          map[x][y] = FLOOR_TILE;
         } else {
-          map[x][y] = new Tile(new Glyph("#", "goldenrod"));
+          map[x][y] = WALL_TILE;
         }
       });
       this._map = new GameMap(map);
