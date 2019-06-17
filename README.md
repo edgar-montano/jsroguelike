@@ -34,6 +34,7 @@ This section guides you through map creation. A map is simply a collection of Ti
 
 Whats New:
 - Tile, Glyph and GameMap classes
+- Updated types to incorporate generic tile sets. 
 
 ![Part 3a - Carving the Caves](screenshots/part3a-carving-the-caves.gif)
  
