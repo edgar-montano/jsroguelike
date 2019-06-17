@@ -27,6 +27,15 @@ Whats New:
 - Constants
 
 ![Part 2 - Screen Management](screenshots/part-2-screen-management.gif)
+
+## Part 3a - Carving the caves
+
+This section guides you through map creation. A map is simply a collection of Tiles, our Tiles utilize the (Null Object Pattern)[http://en.wikipedia.org/wiki/Null_Object_pattern]. The map created will be procedurally generated using a strategy called (cellular automata)[http://roguebasin.roguelikedevelopment.org/index.php?title=Cellular_Automata_Method_for_Generating_Random_Cave-Like_Levels]. Finally we modify GameScreen method to render our new map. 
+
+Whats New:
+- Tile, Glyph and GameMap classes
+
+![Part 3a - Carving the Caves](screenshots/part3a-carving-the-caves.gif)
  
 #### Credit
 
